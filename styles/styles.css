@@ -293,3 +293,27 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
   max-width: 1630px;
   margin: 0 auto;
 }
+
+.newsletter {
+  position: relative;
+  background: #B54425;
+}
+
+.newsletter h2 {
+  font: 400 24px 'Open Sans',sans-serif;
+  color: #C54B2A;
+  margin-bottom: 8px;
+}
+
+.newsletter > div {
+  background: #F8F7EE;
+  padding: 52px 59px 49px 40px;
+  display: inline-block;
+  padding-top: 37px;
+  width: 665px;
+}
+
+.newsletter > a {
+  display: inline-block;
+  color: #000;
+}

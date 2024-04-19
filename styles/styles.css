@@ -186,8 +186,22 @@ main img {
 }
 
 /* sections */
+/*
 main .section {
   padding: 64px 16px;
+}
+*/
+
+main .hero-text {
+  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
+  padding: 29px 0 41px;
+  color: #fff;
+}
+
+main .hero-text p {
+  font: 400 48px 'Oswald',serif;
+  color: #fff;
+  line-height: 1;
 }
 
 main .section-top {
@@ -210,11 +224,13 @@ main .section-top p{
   font: 400 48px 'Oswald',sans-serif;
 }
 
+/*
 @media (width >= 600px) {
   main .section {
     padding: 64px 32px;
   }
 }
+ */
 
 @media (width >= 900px) {
   .section > div {

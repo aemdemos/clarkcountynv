@@ -31,3 +31,39 @@
     order: unset;
   }
 }
+
+body > main > div.section.updates.section-top-container.column-container.cards-container > div.column-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.today-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #5B5B5B;
+  font: 350 24px 'open sans', sans-serif;
+  color: #C54B2A;
+  width: 1630px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 49px 0;
+}
+
+.today-date > div {
+  display: inline-flex;
+  align-items: center;
+}
+
+.today-date > div > img {
+  width: 28px;
+  margin-right: 20px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+  box-sizing: border-box;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}

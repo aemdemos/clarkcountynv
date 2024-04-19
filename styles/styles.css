@@ -288,3 +288,8 @@ body > main > div.section.updates.section-top-container.cards-container > div.se
   -webkit-text-size-adjust: 100%;
   margin-bottom: 0;
 }
+
+body > main > div.section.updates.section-top-container.column-container.cards-container > div.section-top-wrapper > div > div {
+  max-width: 1630px;
+  margin: 0 auto;
+}

@@ -190,6 +190,23 @@ main .section {
   padding: 64px 16px;
 }
 
+main .section-top {
+  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
+  padding: 29px 0 41px;
+  color: #fff;
+}
+
+main .section-top > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .section-top p{
+  font: 400 48px 'Oswald',sans-serif;
+}
+
 @media (width >= 600px) {
   main .section {
     padding: 64px 32px;
@@ -198,7 +215,7 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
   }
 }

@@ -191,9 +191,12 @@ main .section {
 }
 
 main .section-top {
-  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
-  padding: 29px 0 41px;
   color: #fff;
+}
+
+body > main > div.section.section-top-container.top-topics-container > div.section-top-wrapper > div {
+  padding: 29px 0 41px;
+  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
 }
 
 main .section-top > div {
@@ -224,4 +227,64 @@ main .section-top p{
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+body > main > div.section.updates {
+  background: none;
+  position: relative;
+  padding: 0 0 18px 0;
+}
+
+body > main > div.section.updates.section-top-container.cards-container > div.section-top-wrapper {
+  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
+  padding: 29px 0 35px;
+}
+
+body > main > div.section.updates.section-top-container.cards-container > div.section-top-wrapper > div {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body > main > div.section.updates.section-top-container.cards-container > div.section-top-wrapper > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body > main > div.section.updates.section-top-container.cards-container > div.section-top-wrapper > div > div > div:nth-child(1) > p {
+  font: 380 48px oswald, sans-serif;
+  margin: 20px 100px 20px 0;
+  padding: 0;
+}
+
+body > main > div.section.updates.section-top-container.cards-container > div.section-top-wrapper > div > div > div.button-container > p {
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+body > main > div.section.updates.section-top-container.cards-container > div.section-top-wrapper > div > div > div.button-container > p > a {
+  display: inline-flex;
+  align-items: center;
+  color: #000;
+  background: #fff;
+  padding: 20px 60px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 4px;
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+  -webkit-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  transition: background .3s ease;
+  border-radius: 0;
+  border: 0;
+  font: 400 24px 'open sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  margin-bottom: 0;
 }

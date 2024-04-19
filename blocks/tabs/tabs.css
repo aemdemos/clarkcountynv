@@ -1,0 +1,86 @@
+.tabs {
+    width: 100%;
+    margin: 40px 0 0;
+    display: flex;
+}
+
+.tabs .tabs-list {
+    float: left;
+    gap: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+    cursor: pointer;
+    font: 400 32px 'Oswald',serif;
+    width: 40%;
+
+    /*
+      display: flex;
+      gap: 8px;
+      max-width: 100%;
+      overflow-x: auto;
+     */
+}
+
+.tabs .tabs-tab {
+    width: 100%;
+}
+.tabs .tabs-list button {
+   /* display: block;
+    background-color: var(--light-color);
+    color: initial;
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid var(--dark-color);
+    border-radius: 0;
+    text-align: initial;
+    text-overflow: unset;
+    transition: background-color 0.2s;
+    font-size: unset;
+    font-weight: bold;
+*/
+
+      /*flex: 0 0 max-content;*/
+      display: block;
+      margin: 0;
+     /* border: 1px solid var(--dark-color); */
+      border-radius: 0;
+      padding: 8px 16px;
+      background-color: var(--light-color);
+      color: initial;
+      font-size: unset;
+      font-weight: bold;
+      line-height: unset;
+      text-align: initial;
+      text-overflow: unset;
+      overflow: unset;
+      white-space: unset;
+      transition: background-color 0.2s;
+      cursor: pointer;
+      color: #000;
+
+
+}
+
+.tabs .tabs-list button[aria-selected="true"] {
+    border-bottom: 1px solid var(--background-color);
+    background-color: var(--background-color);
+    cursor: pointer;
+    color: #C54B2A;
+    text-decoration: underline;
+}
+
+.tabs .tabs-list button[aria-selected="false"]:hover,
+.tabs .tabs-list button[aria-selected="false"]:focus {
+    background-color: var(--dark-color);
+}
+
+.tabs .tabs-panel {
+    margin-top: -1px;
+    padding: 0 16px;
+    /* border: 1px solid var(--dark-color); */
+    overflow: auto;
+}
+
+.tabs .tabs-panel[aria-hidden="true"] {
+    display: none;
+}

@@ -334,3 +334,28 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
   display: inline-block;
   color: #000;
 }
+
+@media only screen and (max-width: 991px) {
+  body > main > div.section.updates.section-top-container.column-container.cards-container > div.section-top-wrapper > div > div > div:nth-child(1) > p {
+    margin: 0;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.section-top-wrapper > div {
+    padding: 0 34px;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.section-top-wrapper > div > div > div.button-container {
+    display: none;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.cards-wrapper > div {
+    padding: 0 34px;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.column-wrapper > div {
+    font-size: 17px;
+    flex-wrap: wrap;
+    padding: 20px 0 20px;
+    border-bottom: none;
+  }
+}

@@ -1,6 +1,6 @@
 .tabs {
     width: 100%;
-    margin: 40px 0 0;
+   /* margin: 40px 0 0; */
     display: flex;
 }
 
@@ -107,7 +107,7 @@
     display: none;
 }
 
-.tabs-tab > p {
+.tabs p {
     display: block;
     font: 400 32px 'Oswald',serif;
     color: #000;
@@ -118,7 +118,18 @@
     margin-bottom: 30px;
 }
 
+.tabs a {
+    display: inline-block;
+    font: 400 18px 'Open Sans',sans-serif;
+    color: #000;
+}
+
 .tabs-tab[aria-selected="true"] > p {
     color: #C54B2A;
     text-decoration: underline;
+}
+
+.tabs-container h2 {
+    color: #C54B2A;
+    font-size: 34px;
 }

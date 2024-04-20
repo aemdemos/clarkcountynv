@@ -170,12 +170,15 @@
     }
 }
 
-    .carousel-slides a {
-        font: 400 24px 'Open Sans', sans-serif;
+    .carousel-slides a.button {
+        font: 400 24px 'Open Sans',sans-serif;
         color: #B54425;
         padding: 16px 34px;
         text-transform: unset;
+        display: inline;
         font-weight: 400;
+        border-radius: unset;
+        background-color: white;
     }
 
     .carousel-slide-content {

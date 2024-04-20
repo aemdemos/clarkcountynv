@@ -3,6 +3,7 @@
   margin: 0 0 25px;
   padding: 0;
   display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(278px, 1fr)); */
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
@@ -221,3 +222,27 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
     padding: 10px 0 35px;
   }
 }
+
+.cards.events ul{
+  /*display: flex;*/
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cards.events ul > li{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 72px;
+  cursor: pointer;
+}
+
+.cards.events img{
+  width: 50%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+

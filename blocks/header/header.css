@@ -291,3 +291,7 @@ header nav .nav-tools {
   justify-content: center;
   padding: 1rem;
 }
+
+.scrolled {
+  background: rgb(181, 68, 37); /* Orange background when scrolled */
+}

@@ -146,4 +146,15 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    // eslint-disable-next-line max-len
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // For broader compatibility
+    if (scrollTop > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 }

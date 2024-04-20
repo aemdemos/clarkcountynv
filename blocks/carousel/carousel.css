@@ -56,7 +56,7 @@
     padding: 1rem;
     margin: 1.5rem 3rem;
     color: white;
-    background-color: rgba(0 0 0 / 50%);
+    /* background-color: rgba(0 0 0 / 50%); */
     position: relative;
     width: var(--slide-content-width, auto);
 }
@@ -168,3 +168,17 @@
         --slide-content-width: auto;
     }
 }
+
+    .carousel-slides a {
+        font: 400 24px 'Open Sans', sans-serif;
+        color: #B54425;
+        padding: 16px 34px;
+        text-transform: unset;
+        font-weight: 400;
+    }
+
+    .carousel-slide-content {
+        display: flex;
+        align-self: center;
+        background-color: rgb(255, 255, 255);
+    }

@@ -12,8 +12,8 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
+  --link-color: rgb(255, 255, 255);
+  --link-hover-color: rgb(255, 255, 255);
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
@@ -134,22 +134,22 @@ a:hover {
 /* buttons */
 a.button:any-link, button {
   font-family: var(--body-font-family);
-  display: inline-block;
+  /* display: inline-block; */
   box-sizing: border-box;
   text-decoration: none;
   border: 2px solid transparent;
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
-  color: var(--background-color);
+  color: #B54425;
   background-color: var(--link-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {

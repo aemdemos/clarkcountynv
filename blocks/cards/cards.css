@@ -232,17 +232,41 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
 }
 
 .cards.events ul > li{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
   margin-bottom: 72px;
   cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Defines two columns of equal width */
+  gap: 10px; /* Optional: adds space between grid items */
+  padding: 10px;
 }
 
 .cards.events img{
-  width: 50%;
   aspect-ratio: 4 / 3;
   object-fit: contain;
 }
+
+.cards.events h3 {
+  width: 100%;
+  font: 500 24px 'Open Sans',sans-serif;
+  color: #1B1E23;
+  line-height: 1.25;
+  margin: 13px 0 18px;
+}
+
+.cards.events p {
+  font: 400 18px 'Open Sans',sans-serif;
+  color: #1B1E23;
+  line-height: 1.35;
+}
+
+.cards.events .cards-card-body p:first-of-type::before{
+  content:'';
+  display:inline-block;
+  width:28px;
+  height:28px;
+  margin-right:10px;
+  background:url(../../icons/calendar-icon.png) center/cover no-repeat
+}
+
 

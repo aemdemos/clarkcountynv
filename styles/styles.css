@@ -337,7 +337,7 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
 }
 
 .newsletter h2 {
-  font: 400 24px 'Open Sans',sans-serif;
+  font: 400 24px 'open sans',sans-serif;
   color: #C54B2A;
   margin-bottom: 8px;
 }
@@ -382,4 +382,32 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
 
 *, ::after, ::before {
   box-sizing: border-box;
+}
+
+body > main > div.section.newsletter > div {
+  border-top: 35px solid rgb(179, 70, 40);
+  border-bottom: 55px solid rgb(179, 70, 40);
+  padding: 3%;
+}
+
+body > main > div.section.newsletter > div > p > a {
+  display: inline-block;
+  color: #000;
+  border: none;
+  background-color: inherit;
+  padding: 1.5% 0;
+  margin: 0;
+  text-decoration: underline;
+  font: 350 17px 'open sans',sans-serif;
+}
+
+body > main > div.section.newsletter > div > p {
+  margin: 0;
+}
+
+body > main > div.section.newsletter > div h2 {
+  font: 350 25px 'open sans', sans-serif;
+  color: #C54B2A;
+  margin-top: 1.5%;
+  margin-bottom: 8px;
 }

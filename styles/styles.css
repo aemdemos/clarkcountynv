@@ -333,6 +333,30 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
   margin-bottom: 152px;
 }
 
+.hero picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero h1 {
+  padding: 40px;
+  color: #fff;
+  font: 400 48px 'Oswald',serif;
+  line-height: 1;
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+}
+
 @media only screen and (max-width: 991px) {
   body > main > div.section.updates.section-top-container.column-container.cards-container > div.section-top-wrapper > div > div > div:nth-child(1) > p {
     margin: 0;

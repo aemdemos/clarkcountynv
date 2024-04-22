@@ -328,7 +328,9 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
 }
 
 .hero {
-  height: 650px;
+  position: relative;
+  min-height: 650px;
+  margin-bottom: 152px;
 }
 
 @media only screen and (max-width: 991px) {

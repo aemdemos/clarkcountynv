@@ -6,12 +6,6 @@ main .hero-container {
   padding: 0;
 }
 
-.hero {
-  position: relative;
-  min-height: 650px;
-  margin-bottom: 152px;
-}
-
 .hero picture {
   position: absolute;
   z-index: -1;

@@ -4,6 +4,36 @@ import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+function handleNavTools(navWrapper) {
+  const tools = navWrapper.querySelectorAll('.nav-tools .default-content-wrapper p');
+  if (tools && tools.length === 2) {
+    const searchTool = tools[0];
+    const languageTool = tools[1];
+    const nav = document.querySelector('.nav-wrapper nav');
+    const searchDiv = document.createElement('div');
+    searchDiv.classList.add('nav-search');
+    const searchIcon = document.createElement('img');
+    searchIcon.src = '/icons/search.svg';
+    searchIcon.alt = 'Search Icon';
+    searchIcon.classList.add('nav-search-icon');
+    searchDiv.appendChild(searchIcon);
+    const searchText = document.createElement('span');
+    searchText.textContent = searchTool.innerText;
+    searchDiv.appendChild(searchText);
+    const languageDiv = document.createElement('div');
+    languageDiv.classList.add('nav-language');
+    const languageText = document.createElement('span');
+    languageText.textContent = languageTool.innerText;
+    const picture = languageTool.querySelector('picture');
+    picture.classList.add('nav-language-icon');
+    languageDiv.appendChild(languageText);
+    languageDiv.appendChild(picture);
+    nav.appendChild(searchDiv);
+    nav.appendChild(languageDiv);
+    navWrapper.querySelector('nav .nav-tools').remove();
+  }
+}
+
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -157,4 +187,5 @@ export default async function decorate(block) {
       header.classList.remove('scrolled');
     }
   });
+  handleNavTools(navWrapper);
 }

@@ -130,6 +130,14 @@
 }
 
 .tabs-container h2 {
+    background-color: rgb(238, 238, 238);
+    margin: 0;
     color: #C54B2A;
-    font-size: 34px;
+    padding: 38px 0 0 18px;
+    width: 40%;
+    font: 650 34px 'open sans', sans-serif;
+}
+
+body > main > div.section.tabs-container {
+  margin-left: 15px;
 }

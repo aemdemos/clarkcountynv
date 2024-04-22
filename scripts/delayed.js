@@ -6,8 +6,10 @@ sampleRUM('cwv');
 
 // add more delayed functionality here
 
-// async function loadWidget() {
-//   await loadScript(
-//     `https://cdn.userway.org/widget.js`,
-//   );
-// }
+async function loadWidget() {
+  await loadScript(
+    `https://cdn.userway.org/widget.js`,
+  );
+}
+
+loadWidget();

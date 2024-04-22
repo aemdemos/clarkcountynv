@@ -5,3 +5,9 @@ import { sampleRUM } from './aem.js';
 sampleRUM('cwv');
 
 // add more delayed functionality here
+
+// async function loadWidget() {
+//   await loadScript(
+//     `https://cdn.userway.org/widget.js`,
+//   );
+// }

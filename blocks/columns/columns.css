@@ -5,6 +5,7 @@
 
 .columns img {
   width: 100%;
+  height: 100%;
 }
 
 .columns > div > div {
@@ -23,11 +24,114 @@
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 32px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
   }
+}
+
+body > main > div.section.updates.section-top-container.column-container.cards-container > div.column-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.today-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #5B5B5B;
+  font: 350 24px 'open sans', sans-serif;
+  color: #C54B2A;
+  width: 1630px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 49px 0;
+}
+
+.today-date > div {
+  display: inline-flex;
+  align-items: center;
+}
+
+.today-date > div > img {
+  width: 28px;
+  margin-right: 20px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+  box-sizing: border-box;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.columns h3 {
+  font: 350 18px 'open sans',sans-serif;
+  color: #6E6E6E;
+  margin: 10px 0 20px;
+  letter-spacing: 0.1em;
+}
+
+.columns h2 {
+  font: 350 32px 'open sans',sans-serif;
+  color: #B54425;
+  margin: 41px 0 44px;
+  line-height: 1;
+}
+
+.columns p {
+  font: 350 18px 'open sans',sans-serif;
+  color: #000;
+  margin: 40px 0 39px;
+  line-height: 1.5;
+}
+
+.columns a.button {
+  margin: 0;
+  font: 350 24px 'open sans',sans-serif;
+  padding: 14px 30px;
+  color: white;
+  background-color: #B54425;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div {
+  box-sizing: border-box;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1) {
+  max-width: 50%;
+  padding: 3% 9% 2% 2%;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(1) > div.columns-img-col {
+  width: 50%;
+  height: 700px;
+  position: relative;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(2) > div:nth-child(2) {
+  max-width: 50%;
+  padding: 3% 2% 2% 5%;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(2) > div.columns-img-col {
+  width: 50%;
+  height: 700px;
+  position: relative;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div > div.columns-img-col > p {
+  height: 100%;
+  margin: 0;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div > div > p.button-container > a {
+  margin: 0;
+  font: 350 15px 'open sans', sans-serif;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 0;
 }

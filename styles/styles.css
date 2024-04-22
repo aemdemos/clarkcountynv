@@ -38,7 +38,8 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  /*--nav-height: 64px;*/
+  --nav-height: 128px;
 }
 
 @font-face {
@@ -172,6 +173,7 @@ main img {
   max-width: 100%;
   width: auto;
   height: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon {
@@ -186,14 +188,47 @@ main img {
 }
 
 /* sections */
+/*
 main .section {
   padding: 64px 16px;
 }
+*/
+header {
+  background: transparent;
+  transform: translateY(0px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-bottom: 1px solid #fff;
+  transition: all .3s;
+}
 
-main .section-top {
+.hero {
+  position: relative;
+  padding: 32px;
+  min-height: 300px;
+}
+
+main .hero-text {
   background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
   padding: 29px 0 41px;
   color: #fff;
+}
+
+main .hero-text p {
+  font: 400 48px 'Oswald',serif;
+  color: #fff;
+  line-height: 1;
+}
+
+main .section-top {
+  color: #fff;
+}
+
+body > main > div.section.section-top-container.top-topics-container > div.section-top-wrapper > div {
+  padding: 29px 0 41px;
+  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
 }
 
 main .section-top > div {
@@ -207,11 +242,13 @@ main .section-top p{
   font: 400 48px 'Oswald',sans-serif;
 }
 
+/*
 @media (width >= 600px) {
   main .section {
     padding: 64px 32px;
   }
 }
+ */
 
 @media (width >= 900px) {
   .section > div {
@@ -224,4 +261,125 @@ main .section-top p{
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+/*
+body > main > div.section.updates {
+  background: none;
+  position: relative;
+  padding: 0 0 18px 0;
+}
+*/
+
+
+.section-top-wrapper {
+  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
+  padding: 29px 0 35px;
+}
+
+.section-top-wrapper > div {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-top-wrapper > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-top-wrapper > div > div > div:nth-child(1) > p {
+  font: 380 48px oswald, sans-serif;
+  margin: 20px 100px 20px 0;
+  padding: 0;
+}
+
+.section-top-wrapper > div > div > div.button-container > p {
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.section-top-wrapper > div > div > div.button-container > p > a {
+  display: inline-flex;
+  align-items: center;
+  color: #000;
+  background: #fff;
+  padding: 20px 60px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 4px;
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+  -webkit-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  transition: background .3s ease;
+  border-radius: 0;
+  border: 0;
+  font: 400 24px 'open sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  margin-bottom: 0;
+}
+
+body > main > div.section.updates.section-top-container.column-container.cards-container > div.section-top-wrapper > div > div {
+  max-width: 1630px;
+  margin: 0 auto;
+}
+
+.newsletter {
+  position: relative;
+  background: #B54425;
+}
+
+.newsletter h2 {
+  font: 400 24px 'Open Sans',sans-serif;
+  color: #C54B2A;
+  margin-bottom: 8px;
+}
+
+.newsletter > div {
+  background: #F8F7EE;
+  padding: 52px 59px 49px 40px;
+  display: inline-block;
+  padding-top: 37px;
+  width: 665px;
+}
+
+.newsletter > a {
+  display: inline-block;
+  color: #000;
+}
+
+@media only screen and (max-width: 991px) {
+  body > main > div.section.updates.section-top-container.column-container.cards-container > div.section-top-wrapper > div > div > div:nth-child(1) > p {
+    margin: 0;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.section-top-wrapper > div {
+    padding: 0 34px;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.section-top-wrapper > div > div > div.button-container {
+    display: none;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.cards-wrapper > div {
+    padding: 0 34px;
+  }
+
+  body > main > div.section.updates.section-top-container.column-container.cards-container.updates-decorated > div.column-wrapper > div {
+    font-size: 17px;
+    flex-wrap: wrap;
+    padding: 20px 0 20px;
+    border-bottom: none;
+  }
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
 }

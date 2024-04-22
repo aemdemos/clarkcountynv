@@ -129,8 +129,8 @@ function decorateNavItem(parent) {
 
   navInMenuWrap.append(tablist);
 
-  const list = parent.children[1].children;
-  const listLen = list.length;
+  const list = parent.children[1].nodeName === 'UL' ? parent.children[1].children : null;
+  const listLen = list !== null ? list.length : 0;
   let i = 0;
   while (i < listLen) {
     const tabInfo = list.item(i);

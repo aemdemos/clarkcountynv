@@ -1,3 +1,7 @@
+header {
+  height: 110px;
+}
+
 /* header and nav layout */
 header .nav-wrapper {
   /* background-color: var(--background-color); */
@@ -150,6 +154,7 @@ header .nav-brand {
 header nav .nav-brand img {
   width: 128px;
   height: auto;
+  transform: scale(0.9);
 }
 
 /* sections */
@@ -289,4 +294,41 @@ header nav .nav-tools {
 
 .scrolled {
   background: rgb(181, 68, 37); /* Orange background when scrolled */
+}
+
+#nav > div.section.nav-tools > div > p.button-container > a {
+  background-color: transparent;
+  color: white;
+}
+
+.nav-wrapper {
+  height: 100%;
+}
+
+.nav-search {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font: 600 19px 'open sans',sans-serif;
+}
+
+.nav-search-icon {
+  margin-right: 15px;
+}
+
+.nav-language {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font: 600 19px 'open sans',sans-serif;
+}
+
+.nav-language-icon {
+  margin-left: 15px;
+}
+
+header nav {
+  height: 100%;
 }

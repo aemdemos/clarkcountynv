@@ -40,6 +40,27 @@ function buildDateColumn() {
     column[0].appendChild(todayDateContainer);
   }
 }
+
+function addVideoIframe() {
+  const anchors = document.querySelectorAll('.highlight a');
+  anchors.forEach((anchor) => {
+    if (!anchor.classList.contains('button') && anchor.parentElement.children.length === 2) {
+      anchor.innerText = '';
+      const iframe = document.createElement('i');
+      iframe.classList.add('play-button');
+      anchor.appendChild(iframe);
+      anchor.onmouseover = () => {
+        iframe.style.color = '#B54425';
+        anchor.style.border = '2px solid #B54425';
+      };
+      anchor.onmouseout = () => {
+        iframe.style.color = 'white';
+        anchor.style.border = '2px solid white';
+      };
+    }
+  });
+}
+
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
@@ -58,4 +79,5 @@ export default function decorate(block) {
     });
   });
   buildDateColumn();
+  addVideoIframe();
 }

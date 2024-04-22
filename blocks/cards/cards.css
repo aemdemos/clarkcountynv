@@ -269,4 +269,35 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
   background:url(../../icons/calendar-icon.png) center/cover no-repeat
 }
 
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.cards-wrapper > div > ul {
+  margin: 3% 1% 5%;
+  grid-gap: 4%;
+}
 
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.cards-wrapper > div > ul > li {
+  margin-bottom: 3%;
+}
+
+.highlight > ul > li {
+  background-color: white;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container.section-bottom-container > div.section-bottom-wrapper > div > div > div > p > a {
+  display: inline-flex;
+  align-items: center;
+  background: #B54425;
+  color: #fff;
+  padding: 9px 13px 9px 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  margin-left: 1%;
+  font: 350 20px 'open sans', sans-serif;
+  margin-top: 0;
+  margin-bottom: 3%;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container.section-bottom-container > div.section-bottom-wrapper > div > div > div > p {
+  margin-bottom: 0;
+}

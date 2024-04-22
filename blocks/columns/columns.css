@@ -135,3 +135,74 @@ body > main > div.section.highlight.section-top-container.columns-container.card
   border: none;
   border-radius: 0;
 }
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(1) > div.columns-img-col > p > a {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 27px);
+  color: #fff;
+  text-decoration: underline;
+  border: 2px solid #fff;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(1) > div.columns-img-col > p > a > i {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(2) > div.columns-img-col > p > a {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 27px);
+  color: #fff;
+  text-decoration: underline;
+  border: 2px solid #fff;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.play-button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(3);
+  width: 22px;
+  height: 22px
+}
+.play-button::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 7px;
+  left: 9px
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(2) > div.columns-img-col > p > a > i::before {
+  top: 10px;
+  left: 14px;
+}
+

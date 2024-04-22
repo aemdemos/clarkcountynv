@@ -77,6 +77,17 @@ function decorateUpdatesSection() {
   });
 }
 
+function addSeeMoreInEvents() {
+  const seeMoreElement = document.querySelector('.highlight .section-bottom a');
+  const { innerText } = seeMoreElement;
+  seeMoreElement.innerHTML = '';
+  const span = document.createElement('span');
+  span.innerText = innerText;
+  const img = document.createElement('img');
+  img.src = '/icons/white-arrow-right.png';
+  img.alt = 'Right Arrow';
+  seeMoreElement.append(span, img);
+}
 export default function decorate(block) {
   /* change to ul, li */
   const ul = document.createElement('ul');
@@ -93,4 +104,5 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
   decorateUpdatesSection();
+  addSeeMoreInEvents();
 }

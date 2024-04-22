@@ -327,6 +327,10 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
   color: #000;
 }
 
+.hero {
+  height: 650px;
+}
+
 @media only screen and (max-width: 991px) {
   body > main > div.section.updates.section-top-container.column-container.cards-container > div.section-top-wrapper > div > div > div:nth-child(1) > p {
     margin: 0;

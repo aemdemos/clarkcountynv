@@ -1,4 +1,4 @@
-import { getMetadata } from '../../scripts/aem.js';
+import { getMetadata, toClassName } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -86,6 +86,94 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function decorateNavItem(parent) {
+  const menuUl = document.createElement('div');
+  menuUl.className = 'menuUL';
+  const navIn = document.createElement('div');
+  navIn.className = 'nav-in';
+  const navContent = document.createElement('div');
+  navContent.className = 'nav-content';
+  const navContentIn = document.createElement('div');
+  navContentIn.className = 'nav-content-in';
+  const navPageTitle = document.createElement('h2');
+  navPageTitle.className = 'nav-page-title';
+  navPageTitle.textContent = parent.querySelector('strong').textContent;
+  const closeSpan = document.createElement('span');
+  closeSpan.className = 'nav-close';
+  closeSpan.innerText = 'close';
+  closeSpan.addEventListener('onClick', () => {
+    parent.setAttribute('aria-expanded', 'false');
+  });
+  navContentIn.append(navPageTitle);
+  navContentIn.append(closeSpan);
+  navContent.append(navContentIn);
+  navIn.append(navContent);
+  menuUl.append(navIn);
+  /*menuUl.addEventListener('mouseover', () => {
+    parent.setAttribute('aria-expanded', 'true');
+  });
+  menuUl.addEventListener('mouseout', (e) => {
+    if (e.target === e.fromElement) {
+      parent.setAttribute('aria-expanded', 'false');
+    }
+  });*/
+  parent.append(menuUl);
+
+  const navInMenuWrap = document.createElement('div');
+  navInMenuWrap.className = 'nav-in-menu-wrap';
+  navIn.append(navInMenuWrap);
+
+  const tablist = document.createElement('div');
+  tablist.className = 'tabs-list';
+  tablist.setAttribute('role', 'tablist');
+
+  navInMenuWrap.append(tablist);
+
+  const list = parent.children[1].children;
+  const listLen = list.length;
+  let i = 0;
+  while (i < listLen) {
+    const tabInfo = list.item(i);
+    const id = toClassName(tabInfo.querySelector('a').textContent);
+
+    const tabpanel = document.createElement('div');
+    navInMenuWrap.append(tabpanel);
+    // decorate tabpanel
+    tabpanel.className = 'tabs-panel';
+    tabpanel.id = `tabpanel-${id}`;
+    tabpanel.setAttribute('aria-hidden', !!i);
+    tabpanel.setAttribute('aria-labelledby', `tab-${id}`);
+    tabpanel.setAttribute('role', 'tabpanel');
+    const tabpanelItems = tabInfo.querySelector('ul');
+    if (tabpanelItems !== null) {
+      tabpanel.append(tabpanelItems);
+    }
+    i += 1;
+
+    // build tab button
+    const button = document.createElement('button');
+    button.className = 'tabs-tab';
+    button.id = `tab-${id}`;
+    button.innerHTML = tabInfo.innerHTML;
+    button.setAttribute('aria-controls', `tabpanel-${id}`);
+    button.setAttribute('aria-selected', !i);
+    button.setAttribute('role', 'tab');
+    button.setAttribute('type', 'button');
+    button.addEventListener('mouseover', () => {
+      parent.querySelectorAll('[role=tabpanel]').forEach((panel) => {
+        panel.setAttribute('aria-hidden', true);
+      });
+      tablist.querySelectorAll('button').forEach((btn) => {
+        btn.setAttribute('aria-selected', false);
+      });
+      tabpanel.setAttribute('aria-hidden', false);
+      button.setAttribute('aria-selected', true);
+    });
+    tablist.append(button);
+  }
+  parent.children[1].remove();
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -93,7 +181,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/_drafts/absarasw/nav';
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -117,10 +205,15 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    let j = 0;
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('mouseover', () => {
-        if (isDesktop.matches) {
+      if (j === 0) {
+        decorateNavItem(navSection);
+        //j += 1;
+      }
+      navSection.addEventListener('mouseover', (e) => {
+        if (isDesktop.matches && e.target === e.currentTarget) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');

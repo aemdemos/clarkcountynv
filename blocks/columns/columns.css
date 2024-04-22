@@ -5,6 +5,7 @@
 
 .columns img {
   width: 100%;
+  height: 100%;
 }
 
 .columns > div > div {
@@ -23,7 +24,6 @@
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 32px;
   }
 
   .columns > div > div {
@@ -69,21 +69,21 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
 }
 
 .columns h3 {
-  font: 400 18px 'Open Sans',sans-serif;
+  font: 350 18px 'open sans',sans-serif;
   color: #6E6E6E;
   margin: 10px 0 20px;
   letter-spacing: 0.1em;
 }
 
 .columns h2 {
-  font: 400 32px 'Open Sans',sans-serif;
+  font: 350 32px 'open sans',sans-serif;
   color: #B54425;
   margin: 41px 0 44px;
   line-height: 1;
 }
 
 .columns p {
-  font: 400 18px 'Open Sans',sans-serif;
+  font: 350 18px 'open sans',sans-serif;
   color: #000;
   margin: 40px 0 39px;
   line-height: 1.5;
@@ -91,8 +91,47 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
 
 .columns a.button {
   margin: 0;
-  font: 400 24px 'Open Sans',sans-serif;
+  font: 350 24px 'open sans',sans-serif;
   padding: 14px 30px;
   color: white;
   background-color: #B54425;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div {
+  box-sizing: border-box;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(1) > div:nth-child(1) {
+  max-width: 50%;
+  padding: 3% 9% 2% 2%;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(1) > div.columns-img-col {
+  width: 50%;
+  height: 700px;
+  position: relative;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(2) > div:nth-child(2) {
+  max-width: 50%;
+  padding: 3% 2% 2% 5%;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div:nth-child(2) > div.columns-img-col {
+  width: 50%;
+  height: 700px;
+  position: relative;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div > div.columns-img-col > p {
+  height: 100%;
+  margin: 0;
+}
+
+body > main > div.section.highlight.section-top-container.columns-container.cards-container > div.columns-wrapper > div > div > div > p.button-container > a {
+  margin: 0;
+  font: 350 15px 'open sans', sans-serif;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 0;
 }

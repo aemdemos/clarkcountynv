@@ -363,3 +363,7 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
     border-bottom: none;
   }
 }
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}

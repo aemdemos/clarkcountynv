@@ -450,6 +450,10 @@ display-none {
   column-gap: 60px;
 }
 
+.tabs-panel {
+  max-width: 60%;
+}
+
 .tabs-panel ul > li > a {
   text-wrap: wrap;
 }

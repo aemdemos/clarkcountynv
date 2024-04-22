@@ -194,18 +194,6 @@ main .section {
 }
 */
 
-main .hero-text {
-  background: url(../images/section-top-bg.png) left bottom/cover no-repeat;
-  padding: 29px 0 41px;
-  color: #fff;
-}
-
-main .hero-text p {
-  font: 400 48px 'Oswald',serif;
-  color: #fff;
-  line-height: 1;
-}
-
 main .section-top {
   color: #fff;
 }

@@ -327,6 +327,19 @@ body > main > div.section.updates.section-top-container.column-container.cards-c
   color: #000;
 }
 
+header {
+  background: transparent;
+  transform: translateY(0px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #fff;
+  transition: all .3s;
+  height: 105px;
+}
+
 .hero {
   position: relative;
   min-height: 650px;

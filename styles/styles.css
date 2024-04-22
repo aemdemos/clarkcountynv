@@ -193,6 +193,22 @@ main .section {
   padding: 64px 16px;
 }
 */
+header {
+  background: transparent;
+  transform: translateY(0px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-bottom: 1px solid #fff;
+  transition: all .3s;
+}
+
+.hero {
+  position: relative;
+  padding: 32px;
+  min-height: 300px;
+}
 
 main .hero-text {
   background: url(../images/section-top-bg.png) left bottom/cover no-repeat;

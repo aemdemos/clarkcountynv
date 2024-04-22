@@ -418,8 +418,10 @@ body > main > div:nth-child(1) > div > picture > img {
   opacity: 0.75;
   transform-origin: bottom center;
   transform: scale(1.18);
+  width: 100%;
 }
 
 body > main > div:nth-child(1) > div {
   background-color: black;
+  overflow: hidden;
 }

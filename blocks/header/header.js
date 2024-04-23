@@ -116,7 +116,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function decorateNavItem(parent) {
+function decorateNavItem(parent, navSectionSearchItem) {
   const menuUl = document.createElement('div');
   menuUl.className = 'menuUL';
   const navIn = document.createElement('div');
@@ -131,7 +131,7 @@ function decorateNavItem(parent) {
   const closeSpan = document.createElement('span');
   closeSpan.className = 'nav-close';
   closeSpan.innerText = 'close';
-  closeSpan.addEventListener('onClick', () => {
+  closeSpan.addEventListener('click', () => {
     parent.setAttribute('aria-expanded', 'false');
   });
   navContentIn.append(navPageTitle);
@@ -201,6 +201,12 @@ function decorateNavItem(parent) {
     });
     tablist.append(button);
   }
+
+  const navBottom = document.createElement('div');
+  navBottom.className = 'nav-bottom';
+  navBottom.append(navSectionSearchItem.cloneNode(true));
+  navIn.append(navBottom);
+
   parent.children[1].remove();
 }
 
@@ -237,9 +243,10 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    const navSectionSearchItem = navSections.children[0]?.children[1];
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      decorateNavItem(navSection);
+      decorateNavItem(navSection, navSectionSearchItem);
       navSection.addEventListener('mouseover', (e) => {
         if (isDesktop.matches && e.target === e.currentTarget) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
@@ -248,6 +255,7 @@ export default async function decorate(block) {
         }
       });
     });
+    navSectionSearchItem.remove();
   }
 
   // hamburger for mobile

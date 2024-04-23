@@ -12,7 +12,7 @@ async function loadWidget() {
     setTimeout(() => {
       console.log('---------------------------------4 second passed');
       const iframe = document.querySelector('iframe');
-      iframe.style.maxWidth = '350px !important';
+      iframe.style.setProperty('max-width', '350px', 'important');
     }, 4000);
   });
 }

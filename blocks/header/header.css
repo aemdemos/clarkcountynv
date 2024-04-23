@@ -495,9 +495,13 @@ header .tabs-panel ul > li > a {
   text-wrap: wrap;
 }
 
-header nav-in-menu-wrap .tabs-tab[aria-selected="true"] > p {
+header .nav-in-menu-wrap .tabs-tab[aria-selected="true"] > p {
   color: #C54B2A;
   text-decoration: underline;
+}
+
+header .nav-in-menu-wrap .tabs-tab a {
+  font-weight: 400;
 }
 
 header .nav-bottom {

@@ -9,13 +9,11 @@ sampleRUM('cwv');
 async function loadWidget() {
   await loadCSS('/scripts/clientlibs/widget.css');
   await loadScript('/scripts/clientlibs/widget.js').then(() => {
-    console.log('---------------------------------script loaded');
     setTimeout(() => {
-      console.log('---------------------------------5 second passed');
+      console.log('---------------------------------4 second passed');
       const iframe = document.querySelector('iframe');
-      // Add a 'load' event listener to the iframe
       iframe.style.maxWidth = '350px !important';
-    }, 5000);
+    }, 4000);
   });
 }
 

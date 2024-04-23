@@ -118,7 +118,8 @@
 }
 
 .tabs .tabs-panel ul {
-    columns: 100px 2;
+    column-count: 2;
+    column-gap: 10vw;
     list-style: none;
 }
 

@@ -36,7 +36,7 @@ header nav[aria-expanded="true"] {
 
 @media (width >= 600px) {
   header nav {
-    margin: 0 93.5px;
+    margin: 0 93.5px 0 0;
     padding: 0 1rem;
   }
 }
@@ -353,7 +353,7 @@ header nav {
 .nav-content-in{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;width:100%}
 .nav-page-title{font:400 16px 'Open Sans',sans-serif;margin:0;line-height:1}
 .nav-close{font:400 16px 'Open Sans',sans-serif!important;text-transform:capitalize!important;cursor:pointer}
-.nav-in-menu-wrap{width:100%;display:flex;align-items:flex-start}
+.nav-in-menu-wrap{width:100%;display:flex;align-items:flex-start;height: 505px; margin-top: 20px;}
 
 .nav-drop[aria-expanded="true"] .menuUL {
   display: block;
@@ -383,10 +383,6 @@ display-none {
   border-color: #B54425;
 }
 
-.nav-in-menu-wrap {
-  height: 550px;
-  margin-top: 20px;
-}
 
 .nav-in-menu-wrap .tabs-list {
   float: left;
@@ -396,15 +392,13 @@ display-none {
   border-right: 1px solid #bbb;
   width: 37%;
   min-width: 200px;
-  padding: 20px 0 25px 39px;
+  padding: 0 0 0 39px;
 }
 
-.nav-in-menu-wrap .tabs-tab {
-  width: 100%;
-}
 
 .nav-in-menu-wrap .tabs-list button {
   display: block;
+  width: 100%;
   margin: 0;
   border-radius: 0;
   background-color: white;
@@ -420,6 +414,7 @@ display-none {
   color: #000;
   position: relative;
 }
+
 
 .nav-in-menu-wrap .tabs-list button[aria-selected="true"] {
   background-color: var(--light-color);
@@ -502,3 +497,19 @@ nav-in-menu-wrap .tabs-tab[aria-selected="true"] > p {
   color: #C54B2A;
   text-decoration: underline;
 }
+
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 29px 0 46px;
+  border-top: 2px solid #000;
+  height: 80px;
+
+}
+
+.nav-bottom p {
+  margin-top: 30px;
+  font: normal 16px 'Open Sans',sans-serif;
+  color: #000;
+}
+

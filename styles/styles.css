@@ -425,3 +425,12 @@ body > main > div:nth-child(1) > div {
   background-color: black;
   overflow: hidden;
 }
+
+body > main .uwaw {
+  right: unset;
+}
+
+body > div.uwy.userway_p1.utb > div {
+  top: 88%;
+  bottom: unset;
+}

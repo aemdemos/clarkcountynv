@@ -12,7 +12,7 @@ async function loadWidget() {
     setTimeout(() => {
       const iframe = document.querySelector('iframe');
       iframe.style.setProperty('max-width', '350px', 'important');
-    }, 4000);
+    }, 1000);
   });
 }
 

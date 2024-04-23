@@ -524,3 +524,17 @@ header .nav-bottom p {
     text-wrap: pretty;
   }
 }
+
+#nav > div.section.section-logos-container.nav-brand > div > div > div > div:nth-child(1) {
+  margin-left: 6px;
+  margin-right: 20px;
+}
+
+#nav > div.section.section-logos-container.nav-brand > div > div > div > div:nth-child(2) {
+  margin-right: 50px;
+}
+
+#nav > div.section.nav-sections {
+  padding-left: 25px;
+  padding-right: 15px;
+}

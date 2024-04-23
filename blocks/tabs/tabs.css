@@ -1,5 +1,6 @@
 .tabs {
     width: 100%;
+
    /* margin: 40px 0 0; */
     display: flex;
 }
@@ -10,8 +11,10 @@
     max-width: 100%;
     overflow-x: auto;
     cursor: pointer;
-    font: 400 32px 'Oswald',serif;
+    font: 400 32px Oswald,serif;
     width: 40%;
+    background-color: var(--light-color);
+    padding: 0 0 33px;
 
     /*
       display: flex;
@@ -24,6 +27,7 @@
 .tabs .tabs-tab {
     width: 100%;
 }
+
 .tabs .tabs-list button {
    /* display: block;
     background-color: var(--light-color);
@@ -39,27 +43,24 @@
     font-weight: bold;
 */
 
-      /*flex: 0 0 max-content;*/
-      display: block;
-      margin: 0;
-     /* border: 1px solid var(--dark-color); */
-      border-radius: 0;
-      padding: 8px 16px;
-      background-color: var(--light-color);
-      color: initial;
-      font-size: unset;
-      font-weight: bold;
-      line-height: unset;
-      text-align: initial;
-      text-overflow: unset;
-      overflow: unset;
-      white-space: unset;
-      transition: background-color 0.2s;
-      cursor: pointer;
-      color: #000;
-      position: relative;
-
-
+    display: block;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    background-color: white;
+    font-size: unset;
+    font-weight: bold;
+    line-height: unset;
+    text-align: initial;
+    text-overflow: unset;
+    overflow: unset;
+    white-space: unset;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    color: #000;
+    position: relative;
+    background-color: var(--light-color);
+    padding-left: 5vw;
 }
 
 .tabs .tabs-list button::after {
@@ -82,7 +83,7 @@
 }
 
 .tabs .tabs-list button[aria-selected="true"] {
-    border-bottom: 1px solid var(--background-color);
+
    /* background-color: var(--background-color); */
     cursor: pointer;
     color: #C54B2A;
@@ -99,6 +100,7 @@
 .tabs .tabs-panel {
     margin-top: -1px;
     padding: 0 16px;
+
     /* border: 1px solid var(--dark-color); */
     overflow: auto;
 }
@@ -107,15 +109,38 @@
     display: none;
 }
 
+.tabs .tabs-panel a:any-link {
+    padding: 0;
+    margin-bottom: 24px;
+    font: normal 16px 'Open Sans',sans-serif;
+    color: #000;
+    text-decoration: underline;
+}
+
+.tabs .tabs-panel ul {
+    columns: 100px 2;
+    list-style: none;
+    table-layout: fixed:
+}
+
+.tabs .tabs-panel {
+    max-width: 60%;
+}
+
+.tabs .tabs-panel ul > li > a {
+    text-wrap: wrap;
+}
+
 .tabs p {
     display: block;
-    font: 400 32px 'Oswald',serif;
+    font: 350 32px Oswald,serif;
     color: #000;
     padding-right: 160px;
     cursor: pointer;
     transition: all 300ms;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .tabs a {
@@ -130,14 +155,13 @@
 }
 
 .tabs-container h2 {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(238 238 238);
     margin: 0;
     color: #C54B2A;
-    padding: 38px 0 0 18px;
+    padding: 38px 0 0 5vw;
     width: 40%;
     font: 650 34px 'open sans', sans-serif;
+    padding-bottom: 30px;
 }
 
-body > main > div.section.tabs-container {
-  margin-left: 15px;
-}
+

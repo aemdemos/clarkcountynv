@@ -14,7 +14,7 @@ async function loadWidget() {
       console.log('---------------------------------5 second passed');
       const iframe = document.querySelector('iframe');
       // Add a 'load' event listener to the iframe
-      iframe.style.maxWidth = '20vw';
+      iframe.style.maxWidth = '350px !important';
     }, 5000);
   });
 }

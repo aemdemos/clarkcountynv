@@ -58,6 +58,7 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  font-weight: 650;
 }
 
 /* hamburger */
@@ -312,12 +313,12 @@ header nav .nav-tools {
   align-items: center;
   cursor: pointer;
   color: white;
-  font: 600 19px 'open sans',sans-serif;
+  font: 600 18px 'open sans',sans-serif;
   margin-right: 4vw;
-}
+} 
 
 .nav-search-icon {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .nav-language {
@@ -325,7 +326,7 @@ header nav .nav-tools {
   align-items: center;
   cursor: pointer;
   color: white;
-  font: 600 19px 'open sans',sans-serif;
+  font: 400 18px 'open sans',sans-serif;
 }
 
 .nav-language-icon {

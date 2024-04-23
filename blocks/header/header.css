@@ -19,7 +19,6 @@ header nav {
   align-items: center;
   gap: 0 2em;
   /* margin: auto; */
-  max-width: 1264px;
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
@@ -36,7 +35,7 @@ header nav[aria-expanded="true"] {
 
 @media (width >= 600px) {
   header nav {
-    margin: 0 93.5px 0 0;
+    margin: 0;
     padding: 0 1rem;
   }
 }
@@ -171,7 +170,7 @@ header nav[aria-expanded="true"] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
-  margin-left: 150px;
+  margin-left: 5vw;
 }
 
 header nav .nav-sections ul  {
@@ -241,6 +240,7 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+
     /* font-weight: 500; */
     font: 700 16px 'Open Sans',sans-serif;
     color: #fff;
@@ -288,6 +288,7 @@ header nav .nav-tools {
   display: flex;
   align-items: center;
   justify-content: center;
+
   /* padding: 1rem; */
 }
 
@@ -446,6 +447,7 @@ display-none {
 
 .nav-in-menu-wrap .tabs-panel {
   margin-top: -1px;
+
   /* border: 1px solid var(--dark-color); */
   overflow: auto;
   padding: 0 4.5% 108px;
@@ -513,3 +515,8 @@ nav-in-menu-wrap .tabs-tab[aria-selected="true"] > p {
   color: #000;
 }
 
+@media (width <= 1880px) {
+  header nav a:any-link {
+    text-wrap: pretty;
+  }
+}

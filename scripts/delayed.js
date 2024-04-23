@@ -10,7 +10,6 @@ async function loadWidget() {
   await loadCSS('/scripts/clientlibs/widget.css');
   await loadScript('/scripts/clientlibs/widget.js').then(() => {
     setTimeout(() => {
-      console.log('---------------------------------4 second passed');
       const iframe = document.querySelector('iframe');
       iframe.style.setProperty('max-width', '350px', 'important');
     }, 4000);

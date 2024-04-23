@@ -6,13 +6,19 @@ sampleRUM('cwv');
 
 // add more delayed functionality here
 
+function applyMaxWidthToIframe(counter) {
+  const iframe = document.querySelector('iframe');
+  if (iframe) {
+    iframe.style.setProperty('max-width', '350px', 'important');
+  } else if (counter < 100) {
+    setTimeout(() => applyMaxWidthToIframe(counter + 1), 200);
+  }
+}
+
 async function loadWidget() {
   await loadCSS('/scripts/clientlibs/widget.css');
   await loadScript('/scripts/clientlibs/widget.js').then(() => {
-    setTimeout(() => {
-      const iframe = document.querySelector('iframe');
-      iframe.style.setProperty('max-width', '350px', 'important');
-    }, 1000);
+    applyMaxWidthToIframe(0);
   });
 }
 

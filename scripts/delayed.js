@@ -24,13 +24,7 @@ async function loadWidget() {
       iframe.addEventListener('load', () => {
         console.log('Iframe loaded successfully!');
 
-        // Access the iframe content to set CSS styles
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const mainElement = iframeDocument.querySelector('main');
-
-        // Example: Set CSS styles for the main element inside the iframe
-        mainElement.style.backgroundColor = 'lightblue';
-        mainElement.style.right = 'unset';
+        iframe.style['max-width'] = '25vw';
       });
     }, 5000);
   });

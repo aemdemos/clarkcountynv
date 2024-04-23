@@ -9,10 +9,8 @@ sampleRUM('cwv');
 function applyMaxWidthToIframe(counter) {
   const iframe = document.querySelector('iframe');
   if (iframe) {
-    console.log('-----Applying max-width to iframe');
     iframe.style.setProperty('max-width', '350px', 'important');
   } else if (counter < 100) {
-    console.log('-----iframe not present');
     setTimeout(() => applyMaxWidthToIframe(counter + 1), 200);
   }
 }

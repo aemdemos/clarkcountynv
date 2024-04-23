@@ -279,4 +279,8 @@ export default async function decorate(block) {
     }
   });
   handleNavTools(navWrapper);
+  // improve accessibility
+  document.querySelectorAll('#nav > div.section.nav-sections > div > ul > li').forEach((li) => {
+    li.removeAttribute('role');
+  });
 }

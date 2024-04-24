@@ -139,14 +139,6 @@ function decorateNavItem(parent, navSectionSearchItem) {
   navContent.append(navContentIn);
   navIn.append(navContent);
   menuUl.append(navIn);
-  /*menuUl.addEventListener('mouseover', () => {
-    parent.setAttribute('aria-expanded', 'true');
-  });
-  menuUl.addEventListener('mouseout', (e) => {
-    if (e.target === e.fromElement) {
-      parent.setAttribute('aria-expanded', 'false');
-    }
-  });*/
   parent.append(menuUl);
 
   const navInMenuWrap = document.createElement('div');
@@ -247,11 +239,16 @@ export default async function decorate(block) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       decorateNavItem(navSection, navSectionSearchItem);
-      navSection.addEventListener('mouseover', (e) => {
-        if (isDesktop.matches && e.target === e.currentTarget) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
+      navSection.addEventListener('mouseover', () => {
+        if (isDesktop.matches) {
           toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          navSection.setAttribute('aria-expanded', 'true');
+        }
+      });
+      navSection.addEventListener('mouseout', () => {
+        if (isDesktop.matches) {
+          toggleAllNavSections(navSections);
+          navSection.setAttribute('aria-expanded', 'false');
         }
       });
     });

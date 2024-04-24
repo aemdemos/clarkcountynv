@@ -15,10 +15,19 @@ function applyMaxWidthToIframe(counter) {
   }
 }
 
+function applyBackground(counter) {
+  const div = document.querySelector('.userway_buttons_wrapper .uai.userway_dark');
+  if (div) {
+    div.style.setProperty('background', 'rgb(0, 148, 195)', 'important');
+  } else if (counter < 5000) {
+    setTimeout(() => applyBackground(counter + 1), 10);
+  }
+}
+
 async function loadWidget() {
   await loadCSS('/scripts/clientlibs/widget.css');
   await loadScript('/scripts/clientlibs/widget.js').then(() => {
-    document.querySelector('.userway_buttons_wrapper .uai.userway_dark').style.setProperty('background', 'rgb(0, 148, 195)', 'important');
+    applyBackground(0);
     applyMaxWidthToIframe(0);
   });
 }

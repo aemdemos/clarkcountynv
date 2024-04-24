@@ -434,5 +434,8 @@ body > div.uwy.userway_p1.utb > div {
   top: 88%;
   left: 5%;
   bottom: unset;
+}
+
+#userwayAccessibilityIcon {
   background-color: rgb(0, 148, 195) !important;
 }

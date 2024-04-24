@@ -20,7 +20,7 @@ function applyBackground(counter) {
   if (div) {
     div.style.setProperty('background', 'rgb(0, 148, 195)', 'important');
   } else if (counter < 5000) {
-    setTimeout(() => applyBackground(counter + 1), 10);
+    setTimeout(() => applyBackground(counter + 1), 5);
   }
 }
 

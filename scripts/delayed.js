@@ -18,6 +18,7 @@ function applyMaxWidthToIframe(counter) {
 async function loadWidget() {
   await loadCSS('/scripts/clientlibs/widget.css');
   await loadScript('/scripts/clientlibs/widget.js').then(() => {
+    document.querySelector('.userway_buttons_wrapper .uai.userway_dark').style.setProperty('background', 'rgb(0, 148, 195)', 'important');
     applyMaxWidthToIframe(0);
   });
 }

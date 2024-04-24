@@ -215,7 +215,7 @@ header nav .nav-sections ul > li > ul > li {
     display: inline-block;
     position: absolute;
     top: 52px;
-    right: 28px;
+    right: 1.3vw;
     transform: rotate(135deg);
     width: 6px;
     height: 6px;
